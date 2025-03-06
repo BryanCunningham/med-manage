@@ -3,18 +3,20 @@
 import styled from '@emotion/styled';
 import { useTheme } from '../../context/ThemeProvider';
 import Button, { ButtonVariant } from './Button';
+import { MoonIcon } from '../icons';
+import { SunIcon } from '../icons';
 
 const ToggleButton = styled(Button)`
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
   background: ${({ theme }) => theme.colors.background.paper};
   border: 2px solid ${({ theme }) => theme.colors.primary[500]};
   color: ${({ theme }) => theme.colors.text.primary};
   border-radius: ${({ theme }) => theme.borderRadius.full};
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   z-index: 100;
   box-shadow: ${({ theme }) => theme.shadows.md};
@@ -24,6 +26,11 @@ const ToggleButton = styled(Button)`
     bottom: ${({ theme }) => theme.spacing.md};
     right: ${({ theme }) => theme.spacing.md};
   }
+
+  svg {
+    width: ${({ theme }) => theme.spacing.lg};
+    fill: ${({ theme }) => theme.colors.text.primary};
+  }
 `;
 
 const ToggleContainer = styled.div`
@@ -31,15 +38,16 @@ const ToggleContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: ${({ theme }) => theme.spacing.sm};
+  
   p {
     margin: 0;
   }
 `;
 
 const themeIcons = {
-  light: '☀️',
-  dark: '🌙',
-  'high-contrast': '👁️'
+  light: <SunIcon />,
+  dark: <MoonIcon />,
+  // 'high-contrast': '👁️'
 } as const;
 
 export const ThemeToggle = () => {
