@@ -5,7 +5,7 @@ import { playfairDisplay, sourceSans3 } from '../fonts';
 
 // Augment the Emotion theme
 declare module '@emotion/react' {
-  export interface Theme extends EmotionTheme, MedMangeTheme
+  export interface Theme extends EmotionTheme, MedMangeTheme {}
 }
 
 export const lightTheme = {
