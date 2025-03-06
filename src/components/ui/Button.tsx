@@ -1,6 +1,7 @@
-import { Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { PropsWithChildren, ReactNode } from 'react';
+
+import { Theme } from '../../styles/theme.types';
 
 export enum ButtonVariant {
   Primary = 'primary',

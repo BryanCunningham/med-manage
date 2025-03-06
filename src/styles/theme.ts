@@ -1,11 +1,11 @@
-import { MedMangeTheme } from './theme.types';
-import { Theme as EmotionTheme } from '@emotion/react';
+import { Theme as MyTheme } from './theme.types';
 import { playfairDisplay, sourceSans3 } from '../fonts';
 
 
 // Augment the Emotion theme
 declare module '@emotion/react' {
-  export interface Theme extends EmotionTheme, MedMangeTheme {}
+  // @ts-expect-error: Extending Emotion's Theme with custom MyTheme causes type conflicts
+  export type Theme = MyTheme;
 }
 
 export const lightTheme = {

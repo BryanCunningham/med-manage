@@ -1,4 +1,4 @@
-export interface MedMangeTheme {
+export interface Theme {
   colors: {
     primary: {
       100: string;
