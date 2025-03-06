@@ -1,4 +1,4 @@
-import { Theme } from '@/styles/theme';
+import { Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { PropsWithChildren, ReactNode } from 'react';
 

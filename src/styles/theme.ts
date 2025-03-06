@@ -1,8 +1,11 @@
-import { Theme as MyTheme} from './theme.types';
+import { MedMangeTheme } from './theme.types';
+import { Theme as EmotionTheme } from '@emotion/react';
 import { playfairDisplay, sourceSans3 } from '../fonts';
 
+
+// Augment the Emotion theme
 declare module '@emotion/react' {
-  export type Theme = MyTheme;
+  export interface Theme extends EmotionTheme, MedMangeTheme
 }
 
 export const lightTheme = {
@@ -402,5 +405,3 @@ export type ThemeType = 'light' | 'dark' | 'high-contrast';
 export type LightThemeType = typeof lightTheme;
 export type HighContrastThemeType = typeof highContrastTheme;
 export type DarkThemeType = typeof darkTheme;
-
-export type Theme = LightThemeType | DarkThemeType | HighContrastThemeType;
