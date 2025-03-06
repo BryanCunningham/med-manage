@@ -11,7 +11,7 @@ export interface MedMangeTheme {
       800: string;
       900: string;
     };
-    secondary: {
+    secondary?: {
       main: string;
       light: string;
       lighter: string;

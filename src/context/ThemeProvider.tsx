@@ -3,18 +3,18 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import { Global, css } from '@emotion/react';
-import { lightTheme, darkTheme, Theme } from '../styles/theme';
+import { lightTheme, darkTheme, AppTheme } from '../styles/theme';
 
 // TODO: Add high-contrast theme
 type ThemeContextType = {
   themeType: 'light' | 'dark';
   cycleTheme: () => void;
-  theme: Theme;
+  theme: AppTheme;
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-const globalStyles = (theme: Theme) => css`
+const globalStyles = (theme: AppTheme) => css`
   * {
     box-sizing: border-box;
     padding: 0;

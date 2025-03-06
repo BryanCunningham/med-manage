@@ -405,3 +405,4 @@ export type ThemeType = 'light' | 'dark' | 'high-contrast';
 export type LightThemeType = typeof lightTheme;
 export type HighContrastThemeType = typeof highContrastTheme;
 export type DarkThemeType = typeof darkTheme;
+export type AppTheme = LightThemeType | DarkThemeType | HighContrastThemeType;
