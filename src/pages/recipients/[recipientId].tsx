@@ -5,13 +5,10 @@ import { css } from '@emotion/react';
 import Image from 'next/image';
 
 import { CareRecipient } from '../../caregiverData';
-import { Button, RoundIconButton, ButtonVariant, List, MaxWidthContainer, MedicationIcon, Pill, PillVariant, Status, StatusVariant, Surface, SurfaceVariant, Toast } from '@/components';
+import { Button, RoundIconButton, ButtonVariant, List, MaxWidthContainer, MedicationIcon, Pill, PillVariant, Status, StatusVariant, Surface} from '@/components';
 import { useCareGiver, AddMedicationFormData } from '@/context/CaregiverProvider';
 import { AddIcon, CheckCircleIcon } from '@/components/icons';
-import AddMedicationForm from '@/components/care-recipient/AddMedicationForm';
-import getRemainingDays from '@/utils/getRemainingDays';
-import { formatDate } from '@/utils/formatDate';
-import WeeklyCalendar from '@/components/care-recipient/WeeklyCalendar';
+import { AddMedicationForm, WeeklyCalendar } from '@/components/care-recipient';
 
 const GridContainer = styled.div<{isAddFormOpen: boolean}>`
   display: grid;
