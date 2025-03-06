@@ -259,9 +259,9 @@ const RecipientDetail = () => {
                 return (
                   medication.schedule.intervals.map((interval) => {
                     return (
-                      <ItemWithHoverMenu key={medication.medicationId}>
+                      <ItemWithHoverMenu key={interval.id}>
                         <Pill
-                          key={interval.id} icon={interval.hasTaken ? <CheckCircleIcon /> : <MedicationIcon med={medication} />}
+                          icon={interval.hasTaken ? <CheckCircleIcon /> : <MedicationIcon med={medication} />}
                           variant={interval.hasTaken ? PillVariant.Success : PillVariant.Info}
                         >
                           {medication.name} {interval.time}

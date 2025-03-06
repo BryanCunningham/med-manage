@@ -1,36 +1,45 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+Install dependencies:
 
-First, run the development server:
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Project
+This is a medication reminder app for caregivers. It's a simple app that allows caregivers to add medications for their recipients. It also allows caregivers to mark medications as taken.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This design supports both a light and dark theme.
+### Tradeoffs
 
-## Learn More
+#### BE/API layer
+I spun my wheels for a while at the beginning trying to get the DB and API working. I'm not sure how much time I spent on this, but it was more than I expected. Ultimately, I decided to focus on the frontend and use mock data for the API. Which, lead me to having to write some pretty gnarly state management code. :(
 
-To learn more about Next.js, take a look at the following resources:
+#### FE
+As for the FE, the UI is not quite as polished as I would have liked. I spent too much time waffling over the design. Lead me to have to leave form validation, toast notifications, and other minor UI improvements out of the scope of this project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Things I would do differently
+- Lot's of POC commits in the beginning lead to a messy git history. Had to squash them all down to a single commit.
+- The medication 'pills' in the recipient detail view are meant to click through to a more detailed view of the medication. I ran out of time on this.
+- I would add tests for component level code.
+- I would add toast notifications for the API calls.
+- I would add form validation.
+- I would add a loading state for the API calls.
+- I would add a more detailed view of the caregiver/settings.
+- Add responsive styles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+

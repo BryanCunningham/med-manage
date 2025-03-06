@@ -1,4 +1,3 @@
-
 export enum CareRecipientLabel {
   Mother = "mother",
   Father = "father",
@@ -136,7 +135,7 @@ export const mockCaregiverData = {
       medications: [
         {
           medicationId: "med-202",
-          name: "Lipitor",
+          name: "Gabapentin",
           type: MedicationType.Pill,
           schedule: {
             type: "daily",
@@ -148,13 +147,25 @@ export const mockCaregiverData = {
         },
         {
           medicationId: "med-404",
-          name: "Warfarin",
+          name: "Carprofen",
           type: MedicationType.Pill,
           schedule: {
-            type: "weekly",
+            type: "daily",
             intervals: [
-              { id: "10", day: "Sunday", time: "08:00 AM", hasTaken: false },
-              { id: "11", day: "Tuesday", time: "08:00 PM", hasTaken: false },
+              { id: "10", time: "08:00 AM", hasTaken: false },
+              { id: "11", time: "08:00 PM", hasTaken: false },
+            ]
+          }
+        },
+        {
+          medicationId: "med-505",
+          name: "Metronidazole",
+          type: MedicationType.Pill,
+          schedule: {
+            type: "daily",
+            intervals: [
+              { id: "23", time: "09:00 AM", hasTaken: false },
+              { id: "24", time: "09:00 PM", hasTaken: false },
             ]
           }
         }
