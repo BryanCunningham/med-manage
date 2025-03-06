@@ -101,7 +101,7 @@ const AddMedicationForm = ({ onSubmit, isLoading = false }: AddMedicationFormPro
         <Select name="frequency" label="Frequency" options={frequencyOptions} onChange={handleFrequencyChange} />
         {hasDayField && <Select name="dayOfWeek" options={dayOptions} label="Day of week" onChange={(event) => handleFieldChange(event, "dayOfWeek")} />}
         <TimeField onChange={handleTimeChange} />
-        <Button type="submit" isLoading={isLoading}>Add Medication</Button>
+        <Button disabled={!isFormComplete} type="submit" isLoading={isLoading}>Add Medication</Button>
       </StyledForm>
     </Surface>
   );
